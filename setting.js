@@ -18,12 +18,6 @@ particlesJS('d1',{
           //typeをpolygonにした時の設定
           "polygon": {
             "nb_sides": 5 //多角形の角の数
-          },
-          //typeをimageにした時の設定
-          "image": {
-            "src": "images/hoge.png",
-            "width": 100,
-            "height": 100
           }
         },
         "color":{
@@ -72,67 +66,6 @@ particlesJS('d1',{
   
       },
    
-      "interactivity":{
-        "detect_on":"canvas",
-        "events":{
-  
-  //--マウスオーバー時の処理----------
-          "onhover":{
-            "enable":true, //マウスオーバーが有効か否か
-            "mode":"repulse" //マウスオーバー時に発動する動き(下記modes内のgrab、repulse、bubbleより選択)
-          },
-  //--------------------
-  
-  //--クリック時の処理----------
-          "onclick":{
-            "enable":true, //クリックが有効か否か
-            "mode":"push" //クリック時に発動する動き(下記modes内のgrab、repulse、bubble、push、removeより選択)
-          },
-  //--------------------
-  
-        },
-   
-        "modes":{
-  
-  //--カーソルとシェイプの間に線が表示される----------
-          "grab":{
-            "distance":400, //カーソルからの反応距離
-            "line_linked":{
-              "opacity":1 //線の透明度
-            }
-          },
-  //--------------------
-  
-  //--シェイプがカーソルから逃げる----------
-          "repulse":{
-            "distance":200 //カーソルからの反応距離
-          },
-  //--------------------
-  
-  //--シェイプが膨らむ----------
-          "bubble":{
-            "distance":400, //カーソルからの反応距離
-            "size":40, //シェイプの膨らむ大きさ
-            "opacity":8, //膨らむシェイプの透明度
-            "duration":2, //膨らむシェイプの持続時間(onclick時のみ)
-            "speed":3 //膨らむシェイプの速度(onclick時のみ)
-          },
-  //--------------------
-  
-  //--シェイプが増える----------
-          "push":{
-            "particles_nb":4 //増えるシェイプの数
-          },
-  //--------------------
-  
-  //--シェイプが減る----------
-          "remove":{
-            "particles_nb":2 //減るシェイプの数
-          }
-  //--------------------
-  
-        }
-      },
       "retina_detect":true, //Retina Displayを対応するか否か
       "resize":false //canvasのサイズ変更にわせて拡大縮小するか否か
     }

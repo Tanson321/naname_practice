@@ -9,6 +9,7 @@ $('#corner').click(function(){
     $('#two').css('animation-name','rollUp');
     $('#three').css('animation-name','rollUp');
     $('#corner').css('animation-name','rollUpCorner');
+    $('.text').hide();
 });
 
 $("#corner").click(function(){
@@ -18,6 +19,8 @@ $("#corner").click(function(){
         $('#corner').css('animation-name','rollDown');
         $('#corner').css('pointer-events','none');
         $('.back').css('pointer-events','auto');
+        $('.img').css('visibility','hidden');
+        $('.text').show();
     },900);
 });
 
@@ -33,6 +36,7 @@ $('#main').click(function(){
     $('#three').css('animation-delay','300ms');
     $('#corner').css('animation-delay','500ms');
     $('#d1').hide();
+    $('.text').hide();
     $('#main').css('animation-name','rollUp');
     $('#one').css('animation-name','rollUp');
     $('#two').css('animation-name','rollUp');
@@ -47,6 +51,7 @@ $("#main").click(function(){
         $('#main').css('animation-name','rollDown');
         $('#main').css('pointer-events','none');
         $('.back').css('pointer-events','auto');
+        $('.text').show();
     },900);
 })
 
@@ -62,6 +67,7 @@ $('#one').click(function(){
     $('#three').css('animation-delay','300ms');
     $('#corner').css('animation-delay','500ms');
     $('#d1').hide();
+    $('.text').hide();
     $('#main').css('animation-name','rollUp');
     $('#one').css('animation-name','rollUp');
     $('#two').css('animation-name','rollUp');
@@ -76,6 +82,7 @@ $("#one").click(function(){
         $('#one').css('animation-name','rollDown');
         $('#one').css('pointer-events','none');
         $('.back').css('pointer-events','auto');
+        $('.text').show();
     },900);
 })
 
@@ -91,6 +98,7 @@ $('#two').click(function(){
     $('#three').css('animation-delay','300ms');
     $('#corner').css('animation-delay','500ms');
     $('#d1').hide();
+    $('.text').hide();
     $('#main').css('animation-name','rollUp');
     $('#one').css('animation-name','rollUp');
     $('#two').css('animation-name','rollUp');
@@ -105,6 +113,7 @@ $("#two").click(function(){
         $('#two').css('animation-name','rollDown');
         $('#two').css('pointer-events','none');
         $('.back').css('pointer-events','auto');
+        $('.text').show();
     },900);
 })
 
@@ -120,6 +129,7 @@ $('#three').click(function(){
     $('#three').css('animation-delay','300ms');
     $('#corner').css('animation-delay','500ms');
     $('#d1').hide();
+    $('.text').hide();
     $('#main').css('animation-name','rollUp');
     $('#one').css('animation-name','rollUp');
     $('#two').css('animation-name','rollUp');
@@ -134,6 +144,7 @@ $("#three").click(function(){
         $('#three').css('animation-name','rollDown');
         $('#three').css('pointer-events','none');
         $('.back').css('pointer-events','auto');
+        $('.text').show();
     },900);
 })
 
@@ -167,7 +178,7 @@ $("#space").click(function(){
 $('#space').click(function(){
     setTimeout(function(){
         $('.back').show();
-    },1700);
+    },3000);
 });
 
 $('.back').click(function(){
@@ -186,8 +197,15 @@ $('.back').click(function(){
     $('#two').css('animation-name','clickedBack');
     $('#three').css('animation-name','clickedBack');
     $('.back').hide();
+    $('#d1').hide();
     $('h1').hide();
     $('p').hide();
+    $('.img').hide();
+    $('.center').hide();
+    $('.twitter').hide();
+    $('.github').hide();
+    $('h2').hide();
+    $('.text').hide();
 });
 
 $('.back').click(function(){

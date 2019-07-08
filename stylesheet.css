@@ -11,9 +11,11 @@
 
 @keyframes clickedBack{
     0%{
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
     100%{
+        -webkit- clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
     }
 }
@@ -25,8 +27,12 @@
 }
 
 @keyframes rollUpCorner{
+    0%{
+        clip-path: polygon(0% -75%, 100% -75%, 100% -20%, 0% 15%);
+    }
+
     100%{
-        clip-path: polygon(0% -15%, 38% -15%, 0% 0%);
+        clip-path: polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%);
     }
 }
 
@@ -42,11 +48,11 @@
 
 @keyframes rollbackCorner{
     0%{
-        clip-path: polygon(0% -15%, 38% -15%, 0% 0%);
+        clip-path: polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%);
     }
 
     100%{
-        clip-path: polygon(0% 0%, 38% 0%, 0% 15%);
+        clip-path: polygon(0% -75%, 100% -75%, 100% -20%, 0% 15%);
     }
 }
 
@@ -109,20 +115,52 @@ body{
     top: 0%;
     left: 0%;
     background-color: black;
-    clip-path: polygon(0% 0%, 38% 0%, 0% 15%);
+    clip-path: polygon(0% -75%, 100% -75%, 100% -20%, 0% 15%);
     z-index: 5;
     animation-fill-mode: forwards;
     transition: clip-path 100ms linear;
     animation-duration: 300ms;
 }
 
-.corner img{
+.corner .img{
     width: 5%;
     height: auto;
 }
 
+.corner .center{
+    width: 15%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.corner h2{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 150px;
+}
+
 .corner:hover {
-    clip-path: polygon(0% 0%, 40% 0%, 0% 16%);
+    clip-path: polygon(0% -75%, 100% -75%, 100% -19%, 0% 16%);
+}
+
+.links{
+    width: 50%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    filter: brightness(0) invert(1);
+}
+
+.twitter, .github{
+    width: 20%;
+    height: auto;
 }
 
 .back{
@@ -307,9 +345,20 @@ body{
     margin:0 auto;
 }
 
+.text{
+    font-size: 20px;
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 @media screen and (max-width: 1024px){
-    .corner img{
+    .corner .img{
         width: 8%;
         height: auto;
     }
@@ -317,7 +366,7 @@ body{
 }
 
 @media screen and (max-width: 896px){
-    .corner img{
+    .corner .img{
         width: 8%;
         height: auto;
     }
@@ -325,7 +374,7 @@ body{
 }
 
 @media screen and (max-width: 480px){
-    .corner img{
+    .corner .img{
         width: 12%;
         height: auto;
     }
