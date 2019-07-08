@@ -1,0 +1,156 @@
+@font-face {
+	font-family: 'flop';
+	src: url(FLOPDesignFont.ttf);
+}
+
+*{
+    font-family: 'flop';
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.corner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: black;
+    -webkit-clip-path: polygon(0% 0%, 38% 0%, 38% 0%, 0% 15%);
+    clip-path: polygon(0% 0%, 38% 0%, 38% 0%, 0% 15%);
+    z-index: 1;
+    animation-fill-mode: forwards;
+}
+
+.corner img{
+    width: 5%;
+    height: auto;
+}
+
+.corner:hover{
+    transition-duration: 100ms;
+    clip-path: polygon(0% 0%, 40% 0%, 40% 0%, 0% 17%);
+}
+
+.corner:hover+ .main{
+    clip-path: polygon(0% 17%, 40% 0%, 100% 0%, 100% 55%, 0% 90%, 0% 17%);
+    transition-duration: 100ms;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #f842da;
+    clip-path: polygon(0% 15%, 38% 0%, 100% 0%, 100% 55%, 0% 90%, 0% 15%);
+    z-index: 2;
+    animation-fill-mode: forwards;
+}
+
+.main h1{
+    width: 100%;
+    font-size: 10em;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.main p{
+    margin: 0;
+    width: 100%;
+    font-size: 6em;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -30%);
+    overflow: hidden;
+}
+
+.main span{
+    display: inline-block;
+}
+
+.tab-one{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #48f842;
+    -webkit-clip-path: polygon(0% 90%, 100% 55%, 100% 60%, 0% 95%);
+    clip-path: polygon(0% 90%, 100% 55%, 100% 60%, 0% 95%);
+    z-index: 3;
+    animation-fill-mode: forwards;
+}
+
+.tab-two{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #2cd5ff;
+    -webkit-clip-path: polygon(0% 95%, 100% 60%, 100% 65%, 0% 100%);
+    clip-path: polygon(0% 95%, 100% 60%, 100% 65%, 0% 100%);
+    z-index: 3;
+    animation-fill-mode: forwards;
+}
+
+.tab-three{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #8c50c5;
+    -webkit-clip-path: polygon(0% 100%, 100% 65%, 100% 70%, 12% 100%);
+    clip-path: polygon(0% 100%, 100% 65%, 100% 70%, 12% 100%);
+    z-index: 4;
+    animation-fill-mode: forwards;
+}
+
+.space{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #333333;
+    -webkit-clip-path: polygon(12% 100%, 100% 70%, 100% 100%, 15% 100%);
+    clip-path: polygon(12% 100%, 100% 70%, 100% 100%, 15% 100%);
+    animation-fill-mode: forwards;
+}
+
+
+@media screen and (max-width: 1024px){
+    .corner img{
+        width: 8%;
+        height: auto;
+    }
+ 
+}
+
+@media screen and (max-width: 896px){
+    .corner img{
+        width: 8%;
+        height: auto;
+    }
+   
+}
+
+@media screen and (max-width: 480px){
+    .corner img{
+        width: 12%;
+        height: auto;
+    }
+
+}
