@@ -1,4 +1,9 @@
-$(document).on("click touchstart", "#corner", (function(){
+var tapOrClick = window.ontouchstart===null?"touchstart":"click";
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+$(document).on(tapOrClick, "#corner", (function(){
     $('#one').css('animation-delay','100ms');
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
@@ -12,25 +17,30 @@ $(document).on("click touchstart", "#corner", (function(){
     $('.text').hide();
 }));
 
-$(document).on("click touchstart", "#corner", (function(){
+$(document).on(tapOrClick, "#corner", (function(){
     setTimeout(function(){
         $('#corner').css('animation-duration','0.4s');
         $('#corner').css('animation-delay','0s');
         $('#corner').css('animation-name','rollDown');
         $('body *').css('pointer-events','none');
         $('.back').css('pointer-events','auto');
+        $('.twitter').css('pointer-events','auto');
+        $('.github').css('pointer-events','auto');
         $('.img').css('visibility','hidden');
+        $('.github').show();
+        $('.twitter').show();
+        $('h2').show();
         $('.text').show();
     },900);
 }));
 
-$(document).on("click touchstart", "#corner", (function(){
+$(document).on(tapOrClick, "#corner", (function(){
     setTimeout(function(){
         $('.back').show();
     },1200);
 }));
 
-$(document).on("click touchstart", "#main", (function(){
+$(document).on(tapOrClick, "#main", (function(){
     $('#one').css('animation-delay','100ms');
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
@@ -44,7 +54,7 @@ $(document).on("click touchstart", "#main", (function(){
     $('#corner').css('animation-name','rollUpCorner');
 }));
 
-$(document).on("click touchstart", "#main", (function(){
+$(document).on(tapOrClick, "#main", (function(){
     setTimeout(function(){
         $('#main').css('animation-duration','0.4s');
         $('#main').css('animation-delay','0s');
@@ -55,13 +65,13 @@ $(document).on("click touchstart", "#main", (function(){
     },900);
 }));
 
-$(document).on("click touchstart", "#main", (function(){
+$(document).on(tapOrClick, "#main", (function(){
     setTimeout(function(){
         $('.back').show();
     },1200);
 }));
 
-$(document).on("click touchstart", "#one", (function(){
+$(document).on(tapOrClick, "#one", (function(){
     $('#one').css('animation-delay','100ms');
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
@@ -75,7 +85,7 @@ $(document).on("click touchstart", "#one", (function(){
     $('#corner').css('animation-name','rollUpCorner');
 }));
 
-$(document).on("click touchstart", "#one", (function(){
+$(document).on(tapOrClick, "#one", (function(){
     setTimeout(function(){
         $('#one').css('animation-duration','0.4s');
         $('#one').css('animation-delay','0s');
@@ -86,13 +96,13 @@ $(document).on("click touchstart", "#one", (function(){
     },900);
 }));
 
-$(document).on("click touchstart", "#one", (function(){
+$(document).on(tapOrClick, "#one", (function(){
     setTimeout(function(){
         $('.back').show();
     },1200);
 }));
 
-$(document).on("click touchstart", "#two", (function(){
+$(document).on(tapOrClick, "#two", (function(){
     $('#one').css('animation-delay','100ms');
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
@@ -106,7 +116,7 @@ $(document).on("click touchstart", "#two", (function(){
     $('#corner').css('animation-name','rollUpCorner');
 }));
 
-$(document).on("click touchstart", "#two", (function(){
+$(document).on(tapOrClick, "#two", (function(){
     setTimeout(function(){
         $('#two').css('animation-duration','0.4s');
         $('#two').css('animation-delay','0s');
@@ -117,13 +127,13 @@ $(document).on("click touchstart", "#two", (function(){
     },900);
 }));
 
-$(document).on("click touchstart", "#two", (function(){
+$(document).on(tapOrClick, "#two", (function(){
     setTimeout(function(){
         $('.back').show();
     },1200);
 }));
 
-$(document).on("click touchstart", "#three",(function(){
+$(document).on(tapOrClick, "#three",(function(){
     $('#one').css('animation-delay','100ms');
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
@@ -137,7 +147,7 @@ $(document).on("click touchstart", "#three",(function(){
     $('#corner').css('animation-name','rollUpCorner');
 }));
 
-$(document).on("click touchstart", "#three",(function(){
+$(document).on(tapOrClick, "#three",(function(){
     setTimeout(function(){
         $('#three').css('animation-duration','0.4s');
         $('#three').css('animation-delay','0s');
@@ -148,13 +158,13 @@ $(document).on("click touchstart", "#three",(function(){
     },900);
 }));
 
-$(document).on("click touchstart", "#three",(function(){
+$(document).on(tapOrClick, "#three",(function(){
     setTimeout(function(){
         $('.back').show();
     },1300);
 }));
 
-$(document).on("click touchstart", "#space",(function(){
+$(document).on(tapOrClick, "#space",(function(){
     $('#one').css('animation-delay','100ms');
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
@@ -166,7 +176,7 @@ $(document).on("click touchstart", "#space",(function(){
     $('#corner').css('animation-name','rollUpCorner');
 }));
 
-$(document).on("click touchstart", "#space",(function(){
+$(document).on(tapOrClick, "#space",(function(){
     setTimeout(function(){
         $('#space').css('transition-duration','500ms');
         $('#space').css('background-color','black');
@@ -175,13 +185,13 @@ $(document).on("click touchstart", "#space",(function(){
     },900);
 }));
 
-$(document).on("click touchstart", "#space", (function(){
+$(document).on(tapOrClick, "#space", (function(){
     setTimeout(function(){
         $('.back').show();
     },3000);
 }));
 
-$(document).on("click touchstart", "#back",(function(){
+$(document).on(tapOrClick, "#back",(function(){
     $('#main').css('clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#one').css('clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#two').css('clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
@@ -214,7 +224,7 @@ $(document).on("click touchstart", "#back",(function(){
     $('.text').hide();
 }));
 
-$(document).on("click touchstart", "#back",(function(){
+$(document).on(tapOrClick, "#back",(function(){
     setTimeout(function(){
         $('h1').show();
         $('p').show();
@@ -233,8 +243,8 @@ $(document).on("click touchstart", "#back",(function(){
         $("#three").css('-webkit-clip-path','polygon(0% -105%, 100% -105%, 100% -35%, 0% 0%)')
         $('#three').css('animation-delay','240ms');
         $('#three').css('animation-name','rollbackThree');
-        $('#corner').css('clip-path','polygon(0% -15%, 38% -15%, 0% 0%)');
-        $('#corner').css('-webkit-clip-path','polygon(0% -15%, 38% -15%, 0% 0%)');
+        $('#corner').css('clip-path',' polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%)');
+        $('#corner').css('-webkit-clip-path',' polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%)');
         $('#corner').css('animation-name','rollbackCorner');
         $('#corner').css('animation-duration','400ms');
         $('#corner').css('animation-delay','500ms');
@@ -244,7 +254,7 @@ $(document).on("click touchstart", "#back",(function(){
     },750);
 }));
 
-$(document).on("click touchstart", "#back",(function(){
+$(document).on(tapOrClick, "#back",(function(){
     setTimeout(function(){
         $("body *").removeAttr('style');
         $('body *').css('pointer-events','auto');

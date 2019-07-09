@@ -69,24 +69,24 @@ span{
 
 @keyframes rollbackMain{
     0%{
-        -webkit-clip-path: polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%, 0% -90);
-        clip-path: polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%, 0% -90%);
+        -webkit-clip-path: polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%);
+        clip-path: polygon(0% -90%, 100% -90%, 100% -35%, 0% 0%);
     }
 
     100%{
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 90%, 0% 0%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 90%, 0% 0%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 90%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 90%);
     }
 }
 
 @keyframes rollbackOne{
     0%{
-        -webkit-clip-path: polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%, 0% -95%);
-        clip-path: polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%, 0% -95%);
+        -webkit-clip-path: polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%);
+        clip-path: polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%);
     }
     100%{
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 95%, 0% 0%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 95%, 0% 0%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 95%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 95%);
     }
 }
 
@@ -123,6 +123,7 @@ span{
 body{
     width: 100vw;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     margin: 0;
     position: relative;
 }
@@ -182,11 +183,19 @@ body{
     filter: brightness(0) invert(1);
 }
 
-.twitter, .github{
-    width: 20%;
+.twitter{
+    width: 100px;
     height: auto;
     display: hidden;
 }
+
+.github{
+    width: 100px;
+    height: auto;
+    display: hidden;
+}
+
+
 
 .back{
     width: auto;
@@ -397,7 +406,7 @@ body{
 }
 
 
-/*@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px){
     .corner .img{
         width: 8%;
         height: auto;
@@ -487,6 +496,7 @@ body{
         top: 30%;
         left: 50%;
         transform: translate(-50%, -30%);
+        display: none;
     }
 
     .corner .img{
@@ -502,6 +512,7 @@ body{
         top: 20%;
         left: 50%;
         transform: translate(-50%, -20%);
+        display: none;
     }
 
     .corner .links{
@@ -516,15 +527,29 @@ body{
         filter: brightness(0) invert(1);
     }
 
+    .twitter{
+        width: 50px;
+        height: auto;
+        display: none;
+    }
+    
+    .github{
+        width: 50px;
+        height: auto;
+        display: none;
+    }
+
+
+
     .main h1{
-        font-size: 5em;
+        font-size: 3em;
         top: 20%;
         left: 50%;
         transform: translate(-45%, -20%);
     }
 
     .main p{
-        font-size: 4em;
+        font-size: 1.5em;
         top: 45%;
         left: 50%;
         transform: translate(-45%, -45%);
@@ -570,5 +595,13 @@ body{
         top: 95%;
         left: 85%;
         transform: translate(-85%, -95%);
+    }
+
+    .text{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        display: none;
     }
 }
