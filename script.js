@@ -187,25 +187,21 @@ $(document).on("click touchstart", "#back",(function(){
     $('#two').css('clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#three').css('clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#corner').css('clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
-
     $('#corner').css('-webkit-clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#main').css('-webkit-clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#one').css('-webkit-clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#two').css('-webkit-clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
     $('#three').css('-webkit-clip-path', 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)');
-
     $('#corner').css('animation-delay','0ms');
     $('#main').css('animation-delay','80ms');
     $('#one').css('animation-delay','160ms');
     $('#two').css('animation-delay','240ms');
     $('#three').css('animation-delay','320ms');
-
     $('#corner').css('animation-name','clickedBack');
     $('#main').css('animation-name','clickedBack');
     $('#one').css('animation-name','clickedBack');
     $('#two').css('animation-name','clickedBack');
     $('#three').css('animation-name','clickedBack');
-
     $('.back').hide();
     $('#d1').hide();
     $('h1').hide();
@@ -225,8 +221,8 @@ $(document).on("click touchstart", "#back",(function(){
         $('body *').css('pointer-events','none');
         $('#main').css('animation-delay', '0s');
         $('#main').css('animation-name','rollbackMain');
-        $("#one").css('clip-path','polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%, 0% -95%)')
-        $("#one").css('-webkit-clip-path','polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%, 0% -95%)')
+        $("#one").css('clip-path','polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%)')
+        $("#one").css('-webkit-clip-path','polygon(0% -95%, 100% -95%, 100% -35%, 0% 0%)')
         $('#one').css('animation-delay','80ms');
         $('#one').css('animation-name','rollbackOne');
         $("#two").css('clip-path','polygon(0% -100%, 100% -100%, 100% -35%, 0% 0%)')
@@ -237,9 +233,9 @@ $(document).on("click touchstart", "#back",(function(){
         $("#three").css('-webkit-clip-path','polygon(0% -105%, 100% -105%, 100% -35%, 0% 0%)')
         $('#three').css('animation-delay','240ms');
         $('#three').css('animation-name','rollbackThree');
-        $('#corner').css('animation-name','rollbackCorner');
         $('#corner').css('clip-path','polygon(0% -15%, 38% -15%, 0% 0%)');
         $('#corner').css('-webkit-clip-path','polygon(0% -15%, 38% -15%, 0% 0%)');
+        $('#corner').css('animation-name','rollbackCorner');
         $('#corner').css('animation-duration','400ms');
         $('#corner').css('animation-delay','500ms');
         $('#space').css('transition-duration','500ms');

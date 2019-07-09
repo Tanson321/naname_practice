@@ -189,6 +189,8 @@ body{
 }
 
 .back{
+    width: auto;
+    height: auto;
     position: absolute;
     top: 80%;
     left: 92%;
