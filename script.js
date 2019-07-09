@@ -169,6 +169,8 @@ $(document).on(tapOrClick, "#space",(function(){
     $('#two').css('animation-delay','200ms');
     $('#three').css('animation-delay','300ms');
     $('#corner').css('animation-delay','500ms');
+    $('#d1').hide();
+    $('.text').hide();
     $('#main').css('animation-name','rollUp');
     $('#one').css('animation-name','rollUp');
     $('#two').css('animation-name','rollUp');
@@ -181,6 +183,7 @@ $(document).on(tapOrClick, "#space",(function(){
         $('#space').css('transition-duration','500ms');
         $('#space').css('background-color','black');
         $('#body').css('pointer-events','none');
+        $('#d1').show();
         $('.back').css('pointer-events','auto');
     },900);
 }));
