@@ -318,7 +318,7 @@ body{
     position: absolute;
     top: 0%;
     left: 0%;
-    background-color: #8c50c5;
+    background-color: #9366fa;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 105%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 105%);
     z-index: 1;
